@@ -1,5 +1,7 @@
 # sass使用
 
+
+
 ## 变量
 
 ### sass:
@@ -233,3 +235,22 @@ aside[role="complementary"] {
 }
 ```
 
+
+
+## 安装
+
+- 先安装sass插件
+
+- npm install sass-loader@7.1.0 --save
+
+  ​
+
+- [^]: 以防node-sass下载失败
+
+- npm install --global --production windows-build-tools
+
+- npm install --global node-gyp
+
+  ​
+
+- npm install node-sass@4.14.1

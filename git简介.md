@@ -42,6 +42,7 @@ git bush
 - rm 文件名   在工作区将文件删除
 - git rm 文件名 =》git commit -m'备注'  在版本库将文件删除
 - git checkout 使用版本库版本替换工作区版本
+- git ls-files 查看暂存区文件
 
 远程仓库管理
 
@@ -69,6 +70,18 @@ git bush
 - git branch -d <name>  删除某个分支
 
 - git remote -v 查看远程仓库信息
+  
+  
+  ###git 常见问题
+  Q1:git@github.com: Permission denied (publickey).fatal: Could not read from remote repository.
+  问题点：ssh公钥配置不对或者本地git仓库并未和ssh key 关联上
+  A1:在/Users/用户名/.ssh 找到公钥文件，如没有可以打开Git Bash
+     ssh-keygen -t rsa -C "youremail@example.com" 生成好公钥，将公钥复制，在github 上新增一个ssh key
+     （第二种情况参考：https://blog.csdn.net/dotphoenix/article/details/100130424）
+  Q2: failed to push some refs to 'github.com:jimingzhuang/kuaiquxiu-uniApp.git 提交文件拒绝
+  问题点：主要原因是github中的README.md文件不在本地代码目录中
+  A2:先将线上仓库的文件拉去下来git pull --rebase origin master，然后再提交git push -u origin master
+  
 
 
 
